@@ -3,4 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="bottomText">#6B6B76</color>
+    <color name="rippleEffects">#F816A463</color>
+    <color name="buttonSignIn">#1FBAD6</color>
+    <color name="buttonRegisterIn">#83838C</color>
 </resources>
