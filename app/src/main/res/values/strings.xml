@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">UberClone</string>
+    <string name="u_b_e_r">U B E R</string>
+    <string name="str_partner">PARTNER</string>
+    <string name="str_rider_app">LOOKING FOR THE RIDER APP?</string>
+    <string name="str_btn_sign_in">SIGN IN</string>
+    <string name="str_btn_register">REGISTER</string>
 </resources>
