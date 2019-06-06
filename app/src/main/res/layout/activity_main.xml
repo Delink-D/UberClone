@@ -72,4 +72,29 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="202dp" />
 
+    <Button
+        android:id="@+id/btn_signIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bg_btn_signin"
+        android:text="SIGN IN"
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_rider_app"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintEnd_toEndOf="@id/guideline_center_left" />
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bg_btn_regisrer"
+        android:text="REGISTER"
+        android:textColor="@color/buttonRegisterIn"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_rider_app"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_center_right" />
+
 </android.support.constraint.ConstraintLayout>
