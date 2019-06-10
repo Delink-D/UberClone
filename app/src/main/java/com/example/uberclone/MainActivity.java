@@ -2,9 +2,15 @@ package com.example.uberclone;
 
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Button;
+
+import com.rengwuxian.materialedittext.MaterialEditText;
 
 import butterknife.BindView;
 import io.github.inflationx.calligraphy3.CalligraphyConfig;
@@ -34,5 +40,44 @@ public class MainActivity extends AppCompatActivity {
                                 .build()))
                 .build());
         setContentView(R.layout.activity_main);
+
+        btnRegister.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                showRegistrationDialog();
+            }
+        });
+    }
+
+    public void showRegistrationDialog() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setTitle("REGISTER ");
+        dialog.setMessage("Please use email to register");
+
+        LayoutInflater inflater = getLayoutInflater().from(this);
+        View register_layout = inflater.inflate(R.layout.layout_register, null);
+
+        MaterialEditText editEmail = register_layout.findViewById(R.id.edtEmail);
+        MaterialEditText editPassword = register_layout.findViewById(R.id.edtPassword);
+        MaterialEditText editName = register_layout.findViewById(R.id.edtName);
+        MaterialEditText editPhone = register_layout.findViewById(R.id.edtPhone);
+
+        dialog.setView(register_layout);
+
+        dialog.setPositiveButton("Register", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+
+                // check input variables
+            }
+        });
+
+        dialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
     }
 }
